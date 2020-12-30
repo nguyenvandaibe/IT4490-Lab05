@@ -9,14 +9,20 @@ import com.oms.components.abstractdata.gui.ADataListPane;
 import com.oms.components.abstractdata.gui.ADataPagePane;
 import com.oms.components.abstractdata.gui.ADataSearchPane;
 import com.oms.components.abstractdata.gui.ADataSinglePane;
+import com.oms.serverapi.IMediaApi;
+import com.oms.serverapi.MediaApi;
 
 public abstract class ADataPageController<T> {
 	private ADataPagePane<T> pagePane;
+	
+	protected IMediaApi mediaApi;
 	
 	public ADataPageController() {
 		ADataSearchPane searchPane = createSearchPane();
 		
 		ADataListPane<T> listPane = createListPane();
+		
+		this.mediaApi = new MediaApi();
 		
 		searchPane.setController(new IDataSearchController() {
 			@Override
