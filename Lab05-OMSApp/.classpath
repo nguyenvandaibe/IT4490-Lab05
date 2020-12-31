@@ -21,7 +21,7 @@
 	<classpathentry kind="lib" path="lib-jersey-client/jakarta.activation-api-1.2.1.jar"/>
 	<classpathentry kind="lib" path="lib-jersey-client/jakarta.annotation-api-1.3.5.jar"/>
 	<classpathentry kind="lib" path="lib-jersey-client/jakarta.inject-2.6.1.jar"/>
-	<classpathentry kind="lib" path="lib-jersey-client/jakarta.ws.rs-api-2.1.6.jar"/>
+	<classpathentry kind="lib" path="lib-jersey-client/jakarta.ws.rs-api-2.1.6.jar" sourcepath="C:/Users/nguye/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/2.1.6/jakarta.ws.rs-api-2.1.6-sources.jar"/>
 	<classpathentry kind="lib" path="lib-jersey-client/jakarta.xml.bind-api-2.3.2.jar"/>
 	<classpathentry kind="lib" path="lib-jersey-client/javassist-3.25.0-GA.jar"/>
 	<classpathentry kind="lib" path="lib-jersey-client/jaxb-api-2.3.0.jar"/>

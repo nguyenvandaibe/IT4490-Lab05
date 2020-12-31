@@ -21,7 +21,7 @@ public class UserBookPageController extends UserMediaPageController{
 	}
 	@Override
 	public List<? extends Media> search(Map<String, String> searchParams) {
-		return new MediaApi().getBooks(searchParams);
+		return bookApi.getBooks(searchParams);
 	}
 	@Override
 	public MediaSinglePane createSinglePane() {

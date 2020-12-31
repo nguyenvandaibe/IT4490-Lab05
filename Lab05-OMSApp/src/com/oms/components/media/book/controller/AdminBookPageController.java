@@ -14,7 +14,7 @@ import com.oms.components.media.gui.MediaSinglePane;
 public class AdminBookPageController extends AdminMediaPageController{
 	@Override
 	public List<? extends Media> search(Map<String, String> searchParams) {
-		return this.mediaApi.getBooks(searchParams);
+		return bookApi.getBooks(searchParams);
 	}
 	
 	@Override
@@ -29,6 +29,6 @@ public class AdminBookPageController extends AdminMediaPageController{
 	
 	@Override
 	public Media updateMedia(Media media) {
-		return this.mediaApi.updateBook((Book) media);
+		return bookApi.updateBook((Book) media);
 	}
 }
