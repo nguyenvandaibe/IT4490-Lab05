@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.swing.JPanel;
 
+import com.oms.bean.Media;
 import com.oms.components.abstractdata.gui.ADataListPane;
 import com.oms.components.abstractdata.gui.ADataPagePane;
 import com.oms.components.abstractdata.gui.ADataSearchPane;
@@ -60,4 +61,6 @@ public abstract class ADataPageController<T> {
 	public abstract ADataSinglePane<T> createSinglePane();
 
 	public abstract ADataListPane<T> createListPane();
+	
+	public abstract void onEdit(ADataSinglePane<Media> singlePane);
 }

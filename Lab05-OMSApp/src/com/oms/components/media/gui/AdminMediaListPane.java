@@ -14,31 +14,21 @@ import com.oms.components.media.book.gui.BookEditDialog;
 import com.oms.components.media.controller.AdminMediaPageController;
 
 @SuppressWarnings("serial")
-public class AdminMediaListPane extends ADataListPane<Media>{
-	
+public class AdminMediaListPane extends ADataListPane<Media> {
+
 	public AdminMediaListPane(ADataPageController<Media> controller) {
 		this.controller = controller;
 	}
-	
+
 	@Override
 	public void decorateSinglePane(ADataSinglePane<Media> singlePane) {
 		JButton button = new JButton("Edit");
 		singlePane.addDataHandlingComponent(button);
-		
-		IDataManageController<Media> manageController = new IDataManageController<Media>() {
-			@Override
-			public void onAct(Media t) {
-				if (controller instanceof AdminMediaPageController) {
-					Media newMedia = ((AdminMediaPageController) controller).updateMedia(t);
-					singlePane.updateData(newMedia);
-				}
-			}
-		};
-		
+
 		button.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new BookEditDialog(singlePane.getData(), manageController);
+				controller.onEdit(singlePane);
 			}
 		});	
 	}
