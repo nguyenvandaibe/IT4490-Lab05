@@ -35,7 +35,7 @@ public abstract class ADataEditDialog<T> extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				T newT = getNewData();
-				controller.update(newT);
+				controller.onAct(newT);
 				ADataEditDialog.this.dispose();
 			}
 		});

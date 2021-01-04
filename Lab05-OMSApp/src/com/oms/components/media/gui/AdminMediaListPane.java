@@ -27,24 +27,11 @@ public class AdminMediaListPane extends ADataListPane<Media>{
 		
 		IDataManageController<Media> manageController = new IDataManageController<Media>() {
 			@Override
-			public void update(Media t) {
+			public void onAct(Media t) {
 				if (controller instanceof AdminMediaPageController) {
 					Media newMedia = ((AdminMediaPageController) controller).updateMedia(t);
 					singlePane.updateData(newMedia);
 				}
-			}
-
-			@Override
-			public void create(Media t) {
-			}
-
-			@Override
-			public void read(Media t) {
-			}
-
-			@Override
-			public void delete(Media t) {
-				
 			}
 		};
 		
