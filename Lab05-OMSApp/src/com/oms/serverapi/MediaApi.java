@@ -16,9 +16,18 @@ public class MediaApi implements IMediaApi {
 	public static final String PATH = "http://localhost:8080/";
 
 	private Client client;
+	
+	private static MediaApi instance;
 
-	public MediaApi() {
+	private MediaApi() {
 		client = ClientBuilder.newClient();
+	}
+	
+	public static MediaApi getInstance() {
+		if (instance == null) {
+			instance = new MediaApi();
+		}
+		return instance;
 	}
 
 	public ArrayList<Media> getAllMedias() {

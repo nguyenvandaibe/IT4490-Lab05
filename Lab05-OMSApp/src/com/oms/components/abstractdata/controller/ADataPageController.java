@@ -32,7 +32,7 @@ public abstract class ADataPageController<T> {
 
 		ADataListPane<T> listPane = createListPane();
 
-		this.mediaApi = new MediaApi();
+		this.mediaApi = MediaApi.getInstance();
 		bookApi = new BookApi();
 		cdApi = new CdApi();
 		dvdApi = new DvdApi();

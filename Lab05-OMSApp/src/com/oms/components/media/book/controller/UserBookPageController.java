@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.oms.bean.Media;
+import com.oms.components.abstractdata.gui.ADataSinglePane;
 import com.oms.components.cart.controller.CartController;
 import com.oms.components.media.book.gui.BookSearchPane;
 import com.oms.components.media.book.gui.BookSinglePane;
@@ -30,5 +31,8 @@ public class UserBookPageController extends UserMediaPageController{
 	@Override
 	public MediaSearchPane createSearchPane() {
 		return new BookSearchPane();
+	}
+	@Override
+	public void onEdit(ADataSinglePane<Media> singlePane) {
 	}
 }
